@@ -44,6 +44,13 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        // Terminal Theme Colors
+        'terminal-bg': '#1E1E2E',
+        'terminal-lightbg': '#2A2A40',
+        'terminal-text': '#D9E0EE',
+        'terminal-accent': '#44DAFF',
+        'terminal-green': '#ABE9B3',
+        'terminal-command': '#F28FAD',
         chart: {
           "1": "hsl(var(--chart-1))",
           "2": "hsl(var(--chart-2))",
