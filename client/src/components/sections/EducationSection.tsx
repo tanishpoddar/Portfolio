@@ -18,9 +18,9 @@ const EducationSection = forwardRef<HTMLElement, EducationSectionProps>((props, 
       period: "2023 - 2027",
     },
     {
-      title: "High School (PCM + CS)",
+      title: "High School - 12th (PCM + CS)",
       institution: "Mother's Global School - CBSE",
-      period: "2023",
+      period: "2011 - 2023",
     }
   ];
 

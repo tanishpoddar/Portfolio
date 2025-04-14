@@ -34,39 +34,41 @@ const TimelineItem = ({
           <span className="text-sm text-terminal-green">{period}</span>
         </div>
         <div className="mb-1 text-lg">{subtitle}</div>
-        <div className="bg-terminal-lightbg p-3 rounded-md">
-          <p className="text-sm mb-1 text-terminal-green">{tagTitle}</p>
-          {listType === "list" ? (
-            <ul className="text-sm list-disc list-inside ml-2 space-y-1">
-              {tags.map((item, index) => (
-                <motion.li 
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: delay + (index * 0.05) }}
-                >
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {tags.map((tag, index) => (
-                <motion.span 
-                  key={index} 
-                  className="text-xs bg-terminal-bg px-2 py-1 rounded-md"
-                  initial={{ opacity: 0, y: 5 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: delay + (index * 0.05) }}
-                >
-                  {tag}
-                </motion.span>
-              ))}
-            </div>
-          )}
-        </div>
+        {tags && tags.length > 0 && (
+          <div className="bg-terminal-lightbg p-3 rounded-md">
+            <p className="text-sm mb-1 text-terminal-green">{tagTitle}</p>
+            {listType === "list" ? (
+              <ul className="text-sm list-disc list-inside ml-2 space-y-1">
+                {tags.map((item, index) => (
+                  <motion.li 
+                    key={index}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: delay + (index * 0.05) }}
+                  >
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
+            ) : (
+              <div className="flex flex-wrap gap-2">
+                {tags.map((tag, index) => (
+                  <motion.span 
+                    key={index} 
+                    className="text-xs bg-terminal-bg px-2 py-1 rounded-md"
+                    initial={{ opacity: 0, y: 5 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: delay + (index * 0.05) }}
+                  >
+                    {tag}
+                  </motion.span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </motion.div>
   );
