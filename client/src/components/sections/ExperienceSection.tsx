@@ -75,7 +75,6 @@ const ExperienceSection = forwardRef<HTMLElement, ExperienceSectionProps>((props
                 title={experience.title}
                 subtitle={experience.company}
                 period={experience.period}
-                description={experience.description}
                 tags={experience.type === "responsibilities" ? experience.responsibilities : 
                       experience.type === "projects" ? experience.projects : 
                       experience.technologies}

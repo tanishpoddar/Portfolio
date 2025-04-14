@@ -4,7 +4,6 @@ interface TimelineItemProps {
   title: string;
   subtitle: string;
   period: string;
-  description: string;
   tags?: string[];
   tagTitle?: string;
   delay: number;
@@ -15,7 +14,6 @@ const TimelineItem = ({
   title,
   subtitle,
   period,
-  description,
   tags = [],
   tagTitle = "Key Items:",
   delay,
@@ -36,7 +34,6 @@ const TimelineItem = ({
           <span className="text-sm text-terminal-green">{period}</span>
         </div>
         <div className="mb-1 text-lg">{subtitle}</div>
-        <p className="text-sm text-gray-400 mb-3">{description}</p>
         <div className="bg-terminal-lightbg p-3 rounded-md">
           <p className="text-sm mb-1 text-terminal-green">{tagTitle}</p>
           {listType === "list" ? (

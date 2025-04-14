@@ -7,10 +7,10 @@ interface AboutSectionProps {}
 const AboutSection = forwardRef<HTMLElement, AboutSectionProps>((props, ref) => {
   return (
     <section ref={ref} id="about" className="min-h-screen flex items-center justify-center py-20 px-4">
-      <TerminalWindow title="about.js">
+      <TerminalWindow title="about_me.md">
         <div className="mb-4">
           <span className="text-terminal-green">$</span>{" "}
-          <span className="text-terminal-command">cat</span> about.md
+          <span className="text-terminal-command">cat</span> about_me.md
         </div>
         <div className="ml-4 mb-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-terminal-accent">
@@ -25,7 +25,7 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>((props, ref) => 
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                I'm a passionate software developer with a strong foundation in full-stack development. My journey in code began with a curiosity about how things work, and has evolved into a career dedicated to solving complex problems through elegant solutions.
+                I'm a passionate software developer with a strong foundation in building efficient, scalable systems. My core expertise lies in Kotlin development, AWS cloud engineering, and Python-based backend development.
               </motion.p>
               <motion.p 
                 className="mb-4 leading-relaxed"
@@ -34,7 +34,7 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>((props, ref) => 
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                I specialize in building responsive web applications and enjoy working with modern technologies like React, Node.js, and cloud platforms. My approach combines technical expertise with a keen eye for user experience.
+                I’m deeply interested in system design and architecture, always striving to create solutions that are both maintainable and performance-optimized; & enjoy designing and deploying cloud-native applications. Alongside these, I also work on full-stack web development—translating ideas into responsive, functional interfaces backed by solid architecture.
               </motion.p>
               <motion.p 
                 className="leading-relaxed"
@@ -43,7 +43,7 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>((props, ref) => 
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                When I'm not coding, you'll find me exploring new tech, contributing to open source, or perfecting my coffee brewing techniques.
+                Outside of tech, I am a professional martial artist. I hold a Blue-II belt in Shotokan Karate and won a Bronze Medal in the 2019 South Asian Championship.
               </motion.p>
             </div>
             <motion.div 
@@ -63,7 +63,7 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>((props, ref) => 
         </div>
         <div className="mb-4">
           <span className="text-terminal-green">$</span>{" "}
-          <span className="text-terminal-command">grep</span> "interests" about.md
+          <span className="text-terminal-command">grep</span> "interests" about_me.md
         </div>
         <motion.div 
           className="ml-4 mb-8"
@@ -74,11 +74,11 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>((props, ref) => 
         >
           <p className="mb-2 text-terminal-green">Interests:</p>
           <ul className="list-disc list-inside ml-4 space-y-1">
-            <li>Web Application Development</li>
-            <li>Cloud Architecture</li>
-            <li>Open Source Contribution</li>
-            <li>UI/UX Design</li>
-            <li>Blockchain Technology</li>
+            <li>Kotlin Dev</li>
+            <li>AWS Cloud & DevOps</li>
+            <li>System Design & Architecture</li>
+            <li>Python Apps Dev</li>
+            <li>Full Stack Web Dev</li>
           </ul>
         </motion.div>
       </TerminalWindow>

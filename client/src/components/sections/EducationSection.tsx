@@ -6,8 +6,6 @@ interface Education {
   title: string;
   institution: string;
   period: string;
-  description: string;
-  courses: string[];
 }
 
 interface EducationSectionProps {}
@@ -15,25 +13,14 @@ interface EducationSectionProps {}
 const EducationSection = forwardRef<HTMLElement, EducationSectionProps>((props, ref) => {
   const educationItems: Education[] = [
     {
-      title: "Computer Science B.Tech",
-      institution: "University Institute of Technology",
-      period: "2018 - 2022",
-      description: "Focused on algorithms, data structures, and web development. Maintained a 3.8 GPA throughout the program.",
-      courses: ["Data Structures", "Algorithms", "Database Systems", "Web Development", "Software Engineering"]
+      title: "B.Tech in Computer Science Engineering",
+      institution: "SRM Institute of Science and Technology, KTR",
+      period: "2023 - 2027",
     },
     {
-      title: "Full Stack Web Development",
-      institution: "Programming Bootcamp",
-      period: "2022",
-      description: "Intensive 12-week course covering modern web development technologies and practices.",
-      courses: ["React.js", "Node.js", "Express", "MongoDB", "RESTful APIs"]
-    },
-    {
-      title: "AWS Cloud Practitioner",
-      institution: "AWS Certification",
+      title: "High School (PCM + CS)",
+      institution: "Mother's Global School - CBSE",
       period: "2023",
-      description: "Completed certification covering AWS cloud concepts, services, security, and architecture.",
-      courses: ["Cloud Architecture", "AWS Services", "Cloud Security", "Deployment"]
     }
   ];
 
@@ -59,12 +46,7 @@ const EducationSection = forwardRef<HTMLElement, EducationSectionProps>((props, 
                 key={index}
                 title={education.title}
                 subtitle={education.institution}
-                period={education.period}
-                description={education.description}
-                tags={education.courses}
-                delay={index * 0.2}
-                tagTitle="Key Courses:"
-              />
+                period={education.period}                delay={index * 0.2}              />
             ))}
           </div>
         </div>
